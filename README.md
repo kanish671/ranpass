@@ -5,14 +5,14 @@ Simple Random Password Generator CLI Tool.
 This package requires Python 3 (it is 2021 after all). What else, let's see... a human to use it I guess? 
 
 ### Installing
-To install this CLI tool you can clone this repo and then run the below command from within the directory
-```
-python setup.py install
-```
-
-Or alternatively, you can do
+To install this CLI tool you can run the below command
 ```
 pip install ranpass
+```
+
+Alternatively, you clone this repo and then run this command from within the repository folder
+```
+python setup.py install
 ```
 
 Both the above commands would install the package globally and `ranpass` will be available on your system.
