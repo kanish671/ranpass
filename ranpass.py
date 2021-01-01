@@ -18,4 +18,4 @@ def cli():
 )
 def generate(length, option):
     """generates a random password of length and type"""
-    application.generate(int(length), int(option))
+    click.echo(application.generate(int(length), int(option)))
