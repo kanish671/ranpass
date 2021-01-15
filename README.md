@@ -1,3 +1,5 @@
+[![HitCount](http://hits.dwyl.com/kanish671/ranpass.svg)](http://hits.dwyl.com/kanish671/ranpass)
+
 # ranpass
 Simple Random Password Generator CLI Tool.
 
