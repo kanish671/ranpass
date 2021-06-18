@@ -7,7 +7,7 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
 
 setup(
     name = 'ranpass',
-    version = '0.0.2',
+    version = '0.0.3',
     author = 'Anish Krishnaswamy',
     author_email = 'kanish671@gmail.com',
     license = 'MIT',
