@@ -1,5 +1,4 @@
 import string
-from random import randrange
 from secrets import randbelow
 
 def generate(length: int, option: int) -> str:
@@ -22,8 +21,10 @@ def generate(length: int, option: int) -> str:
         Randomly generated password
     """
 
-    specialcharacters = '~`!@#$%^&*-_+=/?.'
+    special_characters = '~`!@#$%^&*-_+=/?.' # special character list
     password = ''
+
+    # building the charpool
     if option >= 1:
         charpool = string.ascii_lowercase
     if option >= 2:
@@ -31,8 +32,11 @@ def generate(length: int, option: int) -> str:
     if option >= 3:
         charpool = charpool + string.digits
     if option == 4:
-        charpool = charpool + specialcharacters
-    stringlength = len(charpool)
+        charpool = charpool + string.punctuation
+
+    charpool_length = len(charpool)
+
+    # generating random password
     for _ in range(length):
-        password = f'{password}{charpool[randbelow(stringlength)]}'
+        password = f'{password}{charpool[randbelow(charpool_length)]}'
     return password

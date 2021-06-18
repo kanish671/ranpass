@@ -1,4 +1,5 @@
 import click
+import pyperclip
 from app import application
 
 CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
@@ -18,4 +19,18 @@ def cli():
 )
 def generate(length, option):
     """generates a random password of length and type"""
-    click.echo(application.generate(int(length), int(option)))
+    logo = """
+    +-----------------------------+
+    | Thank you for using Ranpass |
+    +-----------------------------+
+    """
+    # generate random password
+    password = application.generate(int(length), int(option))
+
+    # copy password to clipboard
+    pyperclip.copy(password)
+
+    # output password and info to terminal
+    click.echo('Password has been copied to clipboard\n')
+    click.echo(password)
+    click.echo(logo)
