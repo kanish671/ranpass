@@ -28,9 +28,12 @@ def generate(length, option):
     password = application.generate(int(length), int(option))
 
     # copy password to clipboard
-    pyperclip.copy(password)
+    try:
+        pyperclip.copy(password)
+        click.echo('Password has been copied to clipboard\n')
+    except Exception:
+        click.echo('Could not copy password to clipboad\n')
 
     # output password and info to terminal
-    click.echo('Password has been copied to clipboard\n')
     click.echo(password)
     click.echo(logo)
