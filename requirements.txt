@@ -1,2 +1,2 @@
-click>=8.5.0
+click>=8.5.1
 pyperclip>=1.11.0
