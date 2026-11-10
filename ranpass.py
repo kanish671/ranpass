@@ -9,7 +9,7 @@ def cli():
     pass
 
 @cli.command()
-@click.option('-l', '--length', type=int, help='Length of password to be generated')
+@click.option('-l', '--length', type=int, required=True, help='Length of password to be generated')
 @click.option('-o', '--option', type=click.Choice(['1', '2', '3', '4']), default = '4',
     help='''Options\n
     1 - alphabetic lowercase\n
